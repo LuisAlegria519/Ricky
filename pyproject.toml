@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ricky-assistant"
+version = "1.0.0"
+description = "A personal AI assistant for email, 3D printing, and verbal inquiries"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "your.email@example.com"},
+]
+keywords = ["assistant", "ai", "email", "3d-printing", "gemini"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "Topic :: Office/Business",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/ricky-assistant"
+Documentation = "https://github.com/yourusername/ricky-assistant#readme"
+Repository = "https://github.com/yourusername/ricky-assistant.git"
+Issues = "https://github.com/yourusername/ricky-assistant/issues"
+
+[project.optional-dependencies]
+voice = ["SpeechRecognition>=3.10.0"]
+dev = ["pytest>=7.0", "black>=22.0", "flake8>=4.0"]
+
+[project.scripts]
+ricky-cli = "ricky.cli:main"
+ricky-web = "ricky.web_server:main"
+ricky-status = "ricky.status_server:main"
+
+[tool.setuptools]
+packages = ["ricky"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311', 'py312']
+
+[tool.isort]
+profile = "black"
+line_length = 100

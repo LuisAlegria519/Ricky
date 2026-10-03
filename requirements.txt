@@ -1,0 +1,10 @@
+# Core dependencies (all optional, but here for reference)
+# SpeechRecognition is optional for voice features
+
+# For optional voice support, uncomment:
+# SpeechRecognition>=3.10.0
+
+# For development and testing:
+# pytest>=7.0
+# black>=22.0
+# flake8>=4.0
